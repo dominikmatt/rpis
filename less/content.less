@@ -1,0 +1,144 @@
+.bold(@size, @lineHeight) {
+	font-family: Helvetica;
+	font-weight: bold;
+	line-height: @lineHeight;
+	font-size: @size; 
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.inline-block {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+html,
+body {
+	height: 100%;
+	background-color: #fff;
+	font-family: Arial;
+}
+
+.wrap {
+	height: 100%;
+}
+
+.left-area {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 280px;
+	height: 100%;
+	background-color: @primaryColor;
+	
+	.pi-logo {
+		margin: 10px 0 10px;
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	
+	ul {
+		li {
+			background-color: @primaryColor;
+			
+			a {
+				display: block;
+				font-family: Arial;
+				line-height: 40px;
+				color: #fff;
+				text-decoration: none;
+				padding-left: 10px;
+				text-transform: uppercase;
+			}
+			
+			&.active,
+			&:hover {
+				background-color: @blueColor;
+				
+				a {
+					
+				}
+			}
+		}
+	} 
+}
+
+.title {
+	font-weight: bold;
+}
+
+.progress {
+	width: 100%;
+}
+
+input {
+	width: 100%;
+}
+
+.content {
+	margin-left: 280px;
+	padding: 20px;
+	width: 700px;
+	
+	&.home {
+		.item {
+			vertical-align: top;
+			.inline-block;
+			width: 200px;
+			text-align: left;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid @primaryColor;
+			min-height: 100px;
+		}
+	}
+	
+	&.system {
+		.wrap {
+			width: 100%;
+			text-align: left;
+			margin-top: 30px;
+		}
+		
+		.value {
+			display: block;
+			vertical-align: top;
+		}
+		
+		#freemem {
+			color: orange;
+		}
+		
+		#usedmem {
+			color: red;
+		}
+		
+		#totalmem {
+			color: green;
+		}
+	}
+}
+
+.subtitle {
+	display: inline-block;
+	.bold(12px, 12px);
+	width: 100px;
+}
+
+
+#services {
+	.label {
+		display: inline-block;
+		min-width: 70px;
+	}
+	
+	.wrap {
+		margin-bottom: 10px;
+	}
+}
